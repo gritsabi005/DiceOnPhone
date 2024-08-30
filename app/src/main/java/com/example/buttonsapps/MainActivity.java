@@ -314,7 +314,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 main.setBackgroundColor(0xFF90EE90);
             }
         }
-        if (shaken && (timeNow - recordedTimeBeforeShaken >= nowItsStill) && changedX < 150f){ // the second if compares the time
+        if (shaken && (timeNow - recordedTimeBeforeShaken >= nowItsStill) && changedX < 10f){ // the second if compares the time
             shaken = false;
             randomNumberByShaking = (int) (1 + Math.random()*6);
             //make the background color white
