@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private TextView textY;
     private TextView textZ;
     private float shakingDifference = 8f;
-    private float nowItsStill = 800f;
+    private float nowItsStill = 400f;
     private float previousX =0, previousY = 0, previousZ =0;
     private long recordedTimeBeforeShaken = 0;
     private boolean shaken = false;
@@ -314,7 +314,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 main.setBackgroundColor(0xFF90EE90);
             }
         }
-        if (shaken && (timeNow - recordedTimeBeforeShaken >= nowItsStill) && changedX < 10f){ // the second if compares the time
+        if (shaken && (timeNow - recordedTimeBeforeShaken >= nowItsStill) && changedX < 2f){ // the second if compares the time
             shaken = false;
             randomNumberByShaking = (int) (1 + Math.random()*6);
             //make the background color white
